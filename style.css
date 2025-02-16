@@ -125,7 +125,7 @@ main {
     gap: 1.5rem;
     border-radius: 1.3rem;
     color: white;
-    line-height: 1.35;
+    line-height: 1.2;
 }
 
 .card-head {
@@ -145,7 +145,7 @@ main {
 }
 
 .card-bottom {
-    line-height: 1.7;
+    line-height: 1.4;
 }
 
 
@@ -178,7 +178,7 @@ main {
     }
 
     .top-container__header h1 {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
         padding: 0;
     }
 
