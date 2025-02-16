@@ -1,0 +1,232 @@
+:root {
+    --dark-purple: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --gray-800: hsl(303, 10%, 53%);
+    --gray-400: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+    --fw-sm: 400;
+    --fw-med: 500;
+    --fw-lg: 700;
+    --ff-def:  "League Spartan", serif;
+}
+
+/* Css Reset */
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+body {
+    min-height: 100dvh;
+    font-family: var(--ff-def);
+    /* font-size: 15px; */
+}
+
+/* Styling mobile first */
+
+body {
+    background-color: var(--gray-400);
+    background-image: url(images/bg-pattern-top-mobile.svg) , url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+}
+
+
+
+main {
+    margin: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    text-align: center;
+}
+
+.top-container__header h1 {
+    font-size: 3rem;
+    padding-inline: 2rem;
+    line-height: 0.8;
+    font-weight: var(--fw-lg);
+    color: var(--dark-purple);
+    margin-bottom: 1.5rem;
+}
+
+.top-container__header p {
+    font-weight: var(--fw-med);
+    line-height: 1.5;
+    color: var(--gray-800);
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: min(100%, 450px);
+}
+
+.review-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: hsla(333, 80%, 67%, 0.1);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.review-box p {
+    color: var(--dark-purple);
+    font-weight: var(--fw-lg);
+    font-size: 1rem;
+}
+
+.review-img {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.testimonial-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 500px;
+}
+
+.testimonial-card {
+    background-color: var(--dark-purple);
+    padding: 2.5rem;
+    display: grid;
+    grid-template-rows: auto-fit;
+    gap: 1.5rem;
+    border-radius: 1.3rem;
+    color: white;
+    line-height: 1.35;
+}
+
+.card-head {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.card-img {
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.person-info {
+    color: var(--soft-pink);
+}
+
+.card-bottom {
+    line-height: 1.7;
+}
+
+
+@media(min-width:800px) {
+    body {
+        background-image: url(images/bg-pattern-top-desktop.svg) , url(images/bg-pattern-bottom-desktop.svg);
+        background-position: top center;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+    }   
+
+}
+
+@media(min-width:1300px) {
+
+    main {
+        height: 100dvh;
+        justify-content: space-around;
+        padding: 4rem 10rem;
+        margin: 0;
+        display: grid;
+        }
+
+    .top-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10rem;
+        text-align: left;
+    }
+
+    .top-container__header h1 {
+        font-size: 4.5rem;
+        padding: 0;
+    }
+
+    .top-container__header p {
+        padding-right: 5.8rem;
+        font-size: 1.1rem;
+    }
+
+    .review-container {
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    .review-box {
+        padding: 1rem;
+        max-width: 420px;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-right: 4rem;
+    }
+
+    .review-box:first-child {
+        align-self: flex-start;
+    }
+
+    .review-box:nth-child(2) {
+        align-self: center;
+    }
+
+    .testimonial-section {
+        flex-direction: row;
+        max-width: 100%;
+        height: 300px;
+        align-items: flex-end;
+    }
+
+    .testimonial-card:first-child {
+        align-self: self-start;
+    }
+
+    .testimonial-card:nth-child(2) {
+        align-self: center;
+    }
+
+
+
+}
+
+
+
+
